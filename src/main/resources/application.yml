@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  pid:
+    file: ./target/application.pid
+    fail-on-write-error: true
+
+
