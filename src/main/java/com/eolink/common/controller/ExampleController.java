@@ -49,6 +49,7 @@ public class ExampleController {
         throw new ApiException("throw api exception", ErrorCodeEnums.FAIL_REQ.getErrorCode());
     }
 
+    @PostMapping("/params")
     public BaseResponse<String> params(@Validated @ApiParam(value = "测试") @NotBlank String test
     @ApiParam(value = "测试22") @IsId @NotBlank @Length(max= 18) String id) {
         return BaseResponse.success("im string");
